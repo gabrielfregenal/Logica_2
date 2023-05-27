@@ -1,0 +1,42 @@
+<meta charset = "utf-8">
+
+<h1>Juego de adivinacion</h1>
+<script>
+    function saltarlinea() {
+        document.write("<br>");
+    }
+    function imprmir(frase){
+        document.write(frase);
+        saltarlinea();
+    }
+
+    var numeroPensado = Math.round(Math.random()*10);
+    console.log(numeroPensado);
+    var intentos = 3;
+    var contador = 1;
+
+    while(contador <= intentos){
+        var numeroIngresado = parseInt(prompt(" Ingrese un numero entre 0-10"));
+
+        if(numeroPensado == numeroIngresado){ 
+            alert( "Felicitaciones acertaste");
+            break;
+        }
+        else{
+            alert(" Fallaste, volver a intentar ");
+        }
+        contador++
+    }
+    if (numeroPensado == numeroIngresado){
+        imprmir(" Lo lograste en el intento " + contador + ". El numero pensado era " + numeroPensado);
+    }
+    else{
+            alert(" Fallaste, fin del juego ");
+    }
+
+    imprmir(" Fin del juego " );
+    
+
+
+
+</script>
